@@ -1230,6 +1230,18 @@ static uint32 GetRegister_HuCNavi(const unsigned int id, char *special, const ui
 
 static void SetRegister_HuCNavi(const unsigned int id, uint32 value)
 {
+ if(id == HuC6280::GSREG_NAVI0)
+ {
+  HuCNaviLatch[0] = value;
+ }
+ else if(id == HuC6280::GSREG_NAVI1)
+ {
+  HuCNaviLatch[1] = value;
+ }
+ else if(id == HuC6280::GSREG_NAVI2)
+ {
+  HuCNaviLatch[2] = value;
+ }
 }
 
 
